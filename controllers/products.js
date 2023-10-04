@@ -8,7 +8,7 @@ const getallproducts = async  (req,res) => {
 }
 const getallproductstesting = async (req,res) => {
     // let query={}
-    const {company,name,feature,sort,select} =req.query;
+    const {company,name,feature,sort,select,price} =req.query;
     const queryobj= {};
     if (company) {
         queryobj.company=company;
@@ -22,9 +22,13 @@ const getallproductstesting = async (req,res) => {
         queryobj.feature=feature;
         
     }
+    if (price) {
+        queryobj.price=price;
+        
+    }
     let apidata= proddy.find(queryobj);
     if (sort) {
-        let sortfix = sort.replaceall(",", " "); // in api there is sort = name,price to replace coma with space its necessary
+        let sortfix = sort.replace(",", " "); // in api there is sort = name,price to replace coma with space its necessary
         apidata = apidata.sort (sortfix); // for removing default sorting
     }
     if (select) {

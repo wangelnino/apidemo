@@ -12,7 +12,7 @@ app.use("/api/products", product_routes); // setting routes or linking with rout
 const start = async () => {
     try {
             await connectdb(process.env.monguri); // function vayo connectdb call vayo 
-        app.listen(port, ()=> {
+        app.listen(port,"0.0.0.0",  ()=> {
             console.log(`${port} Yes iam connecd`);
         });
 

@@ -1,0 +1,29 @@
+[
+    { 
+        "name": "Nino",
+        "price":100,
+        "feature" : true ,
+        "company" : "apple"
+    },
+    
+    { 
+        "name": "srk",
+        "price":99,
+        "feature" : false ,
+        "company" : "apple"
+    },
+    
+    { 
+        "name": "zayn",
+        "price":21,
+        "feature" : true ,
+        "company" : "oppo"
+    },
+    
+    { 
+        "name": "sita",
+        "price":2000,
+        "feature" : false ,
+        "company" : "samsung"
+    }
+]
